@@ -8,12 +8,15 @@
 | --- | --- |
 | 审查代码差异、提交或 PR，检查安全、正确性、并发或性能风险 | [代码审查 Skill](common/skills/code-review/SKILL.md) |
 | Spring Boot API、Service、MyBatis/XML、持久化、事务、项目配置、测试或发布 | [Spring Boot 路由](springboot-change/README.md) |
+| Vue 页面、组件、接口状态、视觉体系、多语言、系统偏好、路由会话、构建或前端测试 | [Vue 路由](vue/README.md) |
 | MySQL 表结构、索引、查询调优、测试、迁移、安全、备份或版本升级 | [MySQL Skill](mysql/SKILL.md) |
 | Redis 缓存结构与键值设计、读写一致性、失效或降级 | [Redis Skill](redis/SKILL.md) |
 | MinIO 文件上传、访问、业务绑定或回收 | [MinIO Skill](minio/SKILL.md) |
 | Nginx 代理路径、请求头、上传限制、代理缓存、超时或上游排查 | [Nginx Skill](nginx/SKILL.md) |
 
 Spring Boot 集成任务按实际技术组合入口：使用 MySQL 的持久化变更加 MySQL，使用 Redis 的缓存变更加 Redis。Spring Boot 项目中的 Spring Cache 或本地缓存经 Service 入口读取框架缓存参考；单独修改缓存配置也可经项目配置入口读取。
+
+前后端联动任务按实际改动组合 Vue、Spring Boot 与中间件入口。分别核对接口字段、认证、错误语义、上传流程和部署路径；不从任一侧的类型或 Mock 推定另一侧的实际行为。
 
 ## 加载约定
 

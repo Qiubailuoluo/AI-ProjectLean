@@ -1,0 +1,18 @@
+# Device-local Obsidian configuration and session state
+.obsidian/
+.trash/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary editor files
+~$*
+*.tmp
+*.swp
+
+# Local environment secrets
+.env
+.env.*
+!.env.example

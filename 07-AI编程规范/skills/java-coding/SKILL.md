@@ -11,7 +11,7 @@ description: >-
 ## 核心规则
 
 **空值与异常**
-- 返回集合、数组时返回空集合，不返回 `null`；`Optional` 只作返回类型，不作字段或参数。
+- 返回集合、数组时返回空集合，不返回 `null`；`Optional` 官方定位是方法返回类型，不作字段或参数；取值用 `orElseThrow()`，不直接 `get()`；`Optional` 变量本身不赋 `null`，也不用 `==` 比较，判断有无值用 `isEmpty()`/`isPresent()`。
 - 不吞异常（空 `catch`）；捕获具体异常；包装异常时保留 `cause`；不用异常做流程控制；`finally` 中不 `return` 或抛异常。
 - 日志用 SLF4J 占位符，不拼字符串；记录异常时把 `Throwable` 作为最后一个参数传入。
 

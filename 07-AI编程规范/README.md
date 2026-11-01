@@ -14,7 +14,7 @@
 4. **验证**：新开一个对话，做一个小任务，确认回复末尾有"读取的规范 / 已验证 / 未验证"三项。
 5. **告诉用户**：装了哪些、装在哪、有没有跳过、验证结果。
 
-之后用户要新增或修改 Skill：读[扩展指南](maintenance/扩展指南.md)，改完运行 `tools/check.py`，并按 `maintenance/README.md` 的约定写记录。写代码任务**不要读 `maintenance/`**。
+之后用户要新增或修改 Skill：读[扩展指南](maintenance/guides/扩展指南.md)，改完运行 `tools/check.py`，并按 `maintenance/README.md` 的约定写记录。写代码任务**不要读 `maintenance/`**。
 
 ## 它怎么工作（三层按需加载）
 
@@ -66,7 +66,7 @@
 │   └── _template/ 新建 Skill 的模板（不会被安装）
 ├── templates/     可选：放进业务项目的 AGENTS.md、Cursor 规则模板
 ├── tools/         install.py 安装、check.py 校验
-└── maintenance/   修改记录、待办、回归任务、扩展指南（写代码时不读）
+└── maintenance/   变更记录、决策日志、Skill 状态、待办、扩展指南（写代码时不读）
 ```
 
 ## 加载约定

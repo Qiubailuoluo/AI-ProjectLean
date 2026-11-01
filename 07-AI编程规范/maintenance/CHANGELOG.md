@@ -2,6 +2,19 @@
 
 新条目写在最上面。每条写：版本、日期、改了什么、为什么改、验证到什么程度、执行者。
 
+## v0.62 · 2026-11-01 · cursor-claude-a01
+
+**起因**：用户要求继续核对官方资料，并让维护区更便于记录变化、保存各 AI 的决策、排查问题和后续使用。
+
+**官方核对（第三轮）**：`typescript-frontend`（`@ts-expect-error` 不再一刀切，沿用项目约定）、`java-coding`（`Optional` 与 `orElseThrow`）、`springboot-service`（线程池队列默认无界；`CallerRunsPolicy` 是官方认可的限流选项，不再说“不默认选”）、`springboot-operations`（优雅停机默认开启、IDE 停止不可靠）、`vue-tooling`（Vite 变量暴露与优先级）、`docker-deploy`（固定摘要要配更新机制）。
+
+**维护区重组**
+- 新增 `decisions.md`（决策日志，含状态与被取代关系）、`skills-status.md`（每个 Skill 的来源、最近变更、核对状态）。
+- `扩展指南`、`回归任务` 移入 `guides/`，与“记录类”文件分开。
+- `README.md` 改为“按要做的事找入口”，并写明记录流程。
+
+**验证**：`tools/check.py` 0 错误 0 警告。
+
 ## v0.61 · 2026-11-01 · cursor-claude-a01
 
 （第二轮核对追加：`file-upload-download`、`springboot-transactions`、`vue-ui`、`security-baseline` 共补充 4 处，见核对记录。）

@@ -11,7 +11,7 @@ description: >-
 ## 核心规则
 
 **类型**
-- 遵守项目 `strict` 配置；不新增 `any`，确需绕过时用 `unknown` 加收窄；`@ts-ignore` 改用 `@ts-expect-error` 并写明原因。
+- 遵守项目 `strict` 配置；不新增 `any`，确需绕过时用 `unknown` 加收窄；必须压制类型错误时优先用 `@ts-expect-error` 并写明原因（它在错误消失后会报"未使用"，便于清理）；升级 TS 版本等过渡期，或项目约定使用 `@ts-ignore` 时，沿用项目约定。
 - 外部数据（接口响应、`localStorage`、URL 参数、`JSON.parse` 结果）不可信：在边界处校验或收窄，不直接断言为目标类型。
 - 接口类型优先从后端契约（如 OpenAPI）生成，其次才手写；手写类型须与实际响应核对。
 

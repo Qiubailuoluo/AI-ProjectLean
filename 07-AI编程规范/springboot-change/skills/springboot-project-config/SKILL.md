@@ -1,7 +1,7 @@
 ---
 name: springboot-project-config
 description: >-
-  修改 Spring Boot 包结构、模块边界、MVC/DDD 组织、common/config、依赖或构建配置时使用。
+  修改 Spring Boot 包结构、模块边界、MVC/DDD 组织、应用配置、日志、缓存配置、依赖或构建时使用。
 ---
 
 # Spring Boot 项目结构与配置
@@ -9,6 +9,8 @@ description: >-
 以目标项目的架构、依赖和构建约定为准；示例不构成必建目录或技术选型。
 
 ## 阅读
+
+- 涉及根目录、环境文件位置、Docker/Compose 或部署目录调整时，读[项目目录与部署边界](../../../common/references/项目目录与部署边界.md)。
 
 - 新增或修改 Java 实现代码时，读[代码复用与注释](../../../common/references/代码复用与注释.md)。
 - 涉及包结构、MVC/DDD、common/config 或外部集成边界时，读[项目组织与共享职责](../../references/SpringBoot-项目组织与共享职责.md)的相关小节。

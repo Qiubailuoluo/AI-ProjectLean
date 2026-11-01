@@ -10,6 +10,8 @@ description: >-
 
 ## 阅读
 
+- 涉及根目录、环境文件位置、Docker/Compose 或部署目录调整时，读[项目目录与部署边界](../../../common/references/项目目录与部署边界.md)。
+
 - 启动、健康、停机、资源排查或发布回退：[运行与发布](../../references/SpringBoot-运行与发布.md)的相关内容。
 - 同时修改 Nginx 代理时，读取[Nginx Skill](../../../nginx/SKILL.md)。
 - 本次同时变更环境配置、依赖或构建时，读[配置与依赖](../../references/SpringBoot-配置与依赖.md)的相关内容。

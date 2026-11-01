@@ -1,0 +1,14 @@
+---
+description: 写代码时使用 AI 编程规范 Skill
+alwaysApply: true
+---
+
+# AI 编程规范入口
+
+可选。复制为业务仓库的 `.cursor/rules/ai-coding-standards.mdc`。已把 `skills/` 安装为原生 Skill 且能自动触发时可以不用。规范目录默认位于仓库根 `07-AI编程规范/`。
+
+- 写代码、改配置、审查、提交前，先读 `07-AI编程规范/skills/engineering-baseline/SKILL.md`，再按任务读对应 Skill 的 `SKILL.md`（索引见 `07-AI编程规范/README.md`）；`references/` 仅在场景匹配时读。
+- 规范与项目事实冲突时以项目事实为准并说明。
+- 交付时回复末尾写：读取的规范、已验证（静态检查/构建/测试/真实运行分开写）、未验证。
+- 不读取 `07-AI编程规范/maintenance/`，除非任务是维护规范本身。
+- 编码授权不等于提交、推送、合并、发布授权。

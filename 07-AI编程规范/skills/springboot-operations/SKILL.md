@@ -18,12 +18,12 @@ description: >-
 
 ## 按需读取
 
-- 根目录、环境文件、Docker/Compose、部署目录：[项目目录与部署边界](../engineering-baseline/references/项目目录与部署边界.md)
+- 根目录、环境文件、Docker/Compose、部署目录：读 `deploy-layout`「项目目录与文件归属」
 - 启动、健康、停机、资源排查、发布回退：[运行与发布](references/SpringBoot-运行与发布.md)
 - 写 Dockerfile 或 Compose：同时使用 `docker-deploy`
 - 同时修改 Nginx 代理：同时使用 `nginx-proxy`
-- 环境配置、依赖、构建同时变化：[配置与依赖](../springboot-project-config/references/SpringBoot-配置与依赖.md)
-- 运行凭据、认证、敏感信息：[工程底线](../engineering-baseline/references/工程底线.md)
+- 环境配置、依赖、构建同时变化：读 `springboot-project-config`「配置与依赖」
+- 运行凭据、认证、敏感信息：读 `engineering-baseline`「工程底线」
 
 ## 验证
 

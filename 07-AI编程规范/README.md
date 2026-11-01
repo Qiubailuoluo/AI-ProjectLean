@@ -1,6 +1,6 @@
 # AI 编程规范
 
-给 AI 写代码时使用的一套 Skill，共 25 个。目标：只把当前任务需要的约束交给 AI，其余不进上下文；易维护、易扩展。
+给 AI 写代码时使用的一套 Skill，共 27 个。目标：只把当前任务需要的约束交给 AI，其余不进上下文；易维护、易扩展。
 
 ## 给接手的 AI（先读这一节）
 
@@ -8,7 +8,7 @@
 
 1. **判断工具**：Cursor 装到 `.cursor/skills/`；Claude Code 装到 `.claude/skills/`；其他工具如果没有 Skill 机制，改用[使用说明](00-使用说明.md)里的 `AGENTS.md` 方式。
 2. **安装**：在本文件夹里运行 `python3 tools/install.py <项目路径>`（Claude Code 加 `--target claude`）。没有 Python 时，直接把 `skills/` 下除 `_template` 以外的所有子目录，整个复制到目标目录。
-   - 必须整套安装，Skill 之间用同级相对路径互相引用。
+   - 每个 Skill 自成一体、没有路径依赖；建议整套安装，这样“同时使用某 Skill”的提示都能生效。
    - 目标目录里已有同名 Skill 时，脚本默认跳过。先告诉用户，再决定是否加 `--force`。
 3. **校验**：运行 `python3 tools/check.py`，应为 0 错误。
 4. **验证**：新开一个对话，做一个小任务，确认回复末尾有"读取的规范 / 已验证 / 未验证"三项。
@@ -33,6 +33,7 @@
 | 通用 | `engineering-baseline` | 任何代码变更：复用、注释、失败语义、验证与交付格式 |
 | | `security-baseline` | 登录鉴权、密码令牌、按用户输入发请求、反序列化、引入依赖 |
 | | `api-contract` | 接口契约、OpenAPI、错误码、分页、版本兼容、前后端字段不一致 |
+| | `abuse-protection` | 登录、验证码、搜索、导出等公开或高成本接口的限流、配额、人机验证 |
 | | `file-upload-download` | 文件上传下载、附件、下载包发布、压缩包处理 |
 | | `code-review` | 审查差异、提交或 PR |
 | | `git-delivery` | 分支、提交、推送、PR、变更描述 |
@@ -55,6 +56,7 @@
 | | `minio-file-lifecycle` | MinIO 对象存储：上传确认、预签名、替换、回收 |
 | | `nginx-proxy` | 代理路径、限流、缓存、超时 |
 | 部署 | `docker-deploy` | Dockerfile、Compose、容器化部署 |
+| | `deploy-layout` | 整理项目或部署目录、搬移 Compose 与环境文件、构建 context、交付清单 |
 
 ## 目录
 

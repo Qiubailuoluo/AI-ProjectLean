@@ -22,9 +22,9 @@ description: >-
 - Mapper/Repository 与 Entity 的职责：[持久化与映射](references/SpringBoot-持久化与映射.md)
 - MyBatis 的 Mapper XML、注解 SQL、动态条件：[MyBatis 参数绑定与动态 SQL](references/SpringBoot-MyBatis与动态SQL.md)
 - 使用 MySQL：同时使用 `mysql-engineering`，再按变更选建模、索引、慢查询、迁移、测试参考
-- 条件更新、并发竞争、事务结果：[事务、并发与幂等](../springboot-transactions/references/SpringBoot-事务并发与幂等.md)；示例见[库存条件更新](../springboot-transactions/examples/库存条件更新.md)
-- 设计数据库测试：[测试策略](../springboot-testing/references/SpringBoot-测试策略.md)
-- 数据归属、敏感字段、访问控制：[工程底线](../engineering-baseline/references/工程底线.md)
+- 条件更新、并发竞争、事务结果：读 `springboot-transactions`「事务并发与幂等」；示例见 `springboot-transactions`「库存条件更新」
+- 设计数据库测试：读 `springboot-testing`「测试策略」
+- 数据归属、敏感字段、访问控制：读 `engineering-baseline`「工程底线」
 
 ## 验证
 

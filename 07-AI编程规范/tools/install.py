@@ -7,7 +7,7 @@
   python3 tools/install.py <项目路径> --dest <目录>       安装到指定目录
   加 --dry-run 只显示将执行的操作；加 --force 覆盖已存在的同名 Skill
 
-必须整套安装：Skill 之间用 ../<skill>/ 相对路径互相引用，要求它们是同级目录。
+每个 Skill 自成一体：文件只链接自己目录内的内容，跨 Skill 只写名称。可只装需要的 Skill，建议整套安装。
 默认不覆盖已存在的同名目录，避免冲掉别人的定制；确认要更新时加 --force。
 """
 import argparse, shutil, sys

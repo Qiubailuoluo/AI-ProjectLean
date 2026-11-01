@@ -20,14 +20,16 @@ description: >-
 ## 按需读取
 
 - 表、字段、约束：[数据建模与约束](references/数据建模与约束.md)
-- 索引、查询计划（列表翻页同时看查询设计部分）：[索引设计与执行计划](references/索引设计与执行计划.md)
+- 索引、查询计划：[索引设计与执行计划](references/索引设计与执行计划.md)
+- 列表分页、游标分页：[分页设计](references/分页设计.md)
 - 慢查询定位与调优：[慢查询诊断与优化](references/慢查询诊断与优化.md)
 - SQL、事务、迁移、性能验证：[测试与验证](references/测试与验证.md)
+- 死锁、锁等待超时、事务重试：[锁失败与重试](references/锁失败与重试.md)
 - DDL 发布与结构版本：[结构迁移与版本管理](references/结构迁移与版本管理.md)
 - 账号、权限、网络连接、敏感数据：[安全与访问控制](references/安全与访问控制.md)
 - 备份、恢复、时间点恢复：[备份与恢复](references/备份与恢复.md)
 - MySQL 服务端升级或降级评估：[服务端版本管理](references/服务端版本管理.md)
-- 编写应用代码或运维脚本：[工程底线](../engineering-baseline/references/工程底线.md)
+- 编写应用代码或运维脚本：读 `engineering-baseline`「工程底线」
 
 ## 验证
 

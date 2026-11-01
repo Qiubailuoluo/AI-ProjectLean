@@ -2,6 +2,43 @@
 
 新条目写在最上面。每条写：版本、日期、改了什么、为什么改、验证到什么程度、执行者。
 
+## v0.61 · 2026-11-01 · cursor-claude-a01
+
+（第二轮核对追加：`file-upload-download`、`springboot-transactions`、`vue-ui`、`security-baseline` 共补充 4 处，见核对记录。）
+
+**起因**：用户确认 Skill 数量不设上限，可按需增删拆合；并要求对照官方资料核对 Skill，避免 AI 据此做出危险或错误的操作。
+
+**拆分**：`engineering-baseline` 的 4 份场景性参考拆出为两个 Skill，Skill 总数 25 → 27。
+- `abuse-protection`：限流与入口约束、人机验证。
+- `deploy-layout`：项目目录与文件归属、部署路径与配置契约。
+- `engineering-baseline` 只保留真正通用的内容。
+
+**官方资料核对**（详见 [核对记录](agents/cursor-claude-a01/2026-11-01-官方资料核对.md)）：修正 `security-baseline`、`docker-deploy`、`api-contract` 中 9 处与官方资料不符或不够安全的写法。
+
+**验证**：`tools/check.py` 0 错误 0 警告。**未验证**：未覆盖的条款见核对记录；真实 Cursor 触发、Windows、回归任务。
+
+## v0.60 · 2026-11-01 · cursor-claude-a01
+
+**起因**：v0.50 的 reference 之间用 `../<skill>/…` 互相链接，Skill 不能单独拷贝或安装，也违反“引用只一层”的建议；剩余约 40 份 reference 仍是旧文风，部分篇幅聚合。
+
+**结构**
+- 每个 Skill 自成一体：文件只链接自己目录内的内容；跨 Skill 只写名称和参考标题。`check.py` 同时检查：链接不离开本 Skill、被引用的 Skill 存在、标题能对应到参考文件。
+- `install.py` 与文档不再要求“必须整套安装”，改为建议。
+
+**拆分**（减少一次读取的无关内容）
+- `springboot-service`：异步与非 HTTP 入口单独成文。
+- `mysql-engineering`：分页设计、锁失败与重试单独成文。
+- `nginx-proxy`：转发头与信任边界、超时重试与请求体单独成文。
+- `git-delivery`：本地运行配置、提交隔离与产物边界分开。
+- `project-memory`：多 AI 记录归属、记录内容与交接分开。
+- `engineering-baseline`：限流与入口约束、人机验证、项目目录与文件归属、部署路径与配置契约四份。
+- `vue-data`：请求与状态、共享状态与缓存。`vue-ui`：页面组织与复用、样式与文件拆分。
+- `redis-engineering`：Value 序列化与 TTL 单独成文。
+
+**文风**：剩余 reference 全部重写为“适用 → 规则 → 验证 → 参考”，一句一条、动词开头。技术含义不变。
+
+**验证**：`tools/check.py` 0 错误 0 警告；安装到临时目录后链接全部有效。**未验证**：真实 Cursor 触发、Windows、回归任务；新增 6 个 Skill 未对照官方资料。
+
 ## v0.50 · 2026-11-01 · cursor-claude-a01
 
 **起因**：规范要以“压缩包交给别人，AI 读取后在项目里安装”的方式分发；同时要降低无效上下文，修正文风，拆分过聚合的内容。

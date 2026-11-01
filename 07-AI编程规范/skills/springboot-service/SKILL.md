@@ -20,12 +20,12 @@ description: >-
 ## 按需读取
 
 - Service、模块调用、异步或非 HTTP 入口：[Service 与模块协作](references/SpringBoot-Service与模块协作.md)
-- MVC/DDD 组织、common、模块包边界：[项目组织与共享职责](../springboot-project-config/references/SpringBoot-项目组织与共享职责.md)
-- 事务、并发、幂等、外部副作用：[事务、并发与幂等](../springboot-transactions/references/SpringBoot-事务并发与幂等.md)
+- MVC/DDD 组织、common、模块包边界：读 `springboot-project-config`「项目组织与共享职责」
+- 事务、并发、幂等、外部副作用：读 `springboot-transactions`「事务并发与幂等」
 - Spring Cache、CacheManager、本地或多级缓存：[缓存集成](references/SpringBoot-缓存集成.md)；用到 Redis 时同时使用 `redis-engineering`
 - MinIO 文件上传、绑定、访问、删除：同时使用 `minio-file-lifecycle`
-- 设计业务测试：[测试策略](../springboot-testing/references/SpringBoot-测试策略.md)
-- 身份、权限、数据边界、失败语义：[工程底线](../engineering-baseline/references/工程底线.md)
+- 设计业务测试：读 `springboot-testing`「测试策略」
+- 身份、权限、数据边界、失败语义：读 `engineering-baseline`「工程底线」
 
 ## 验证
 

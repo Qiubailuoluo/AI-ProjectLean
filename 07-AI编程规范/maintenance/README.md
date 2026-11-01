@@ -30,6 +30,6 @@
 | 记录 | 作者 | 内容 |
 | --- | --- | --- |
 | [agents/codex-a01/2026-11-01-维护区按需加载.md](agents/codex-a01/2026-11-01-维护区按需加载.md) | codex-a01 | v0.23 时期维护区按需加载与迁移核查（旧结构，历史） |
-| [agents/cursor-claude-a01/2026-11-01-原生Skill重构.md](agents/cursor-claude-a01/2026-11-01-原生Skill重构.md) | cursor-claude-a01 | v0.30–v0.50：审查结论、原生 Skill 重构、文风与拆分、决策依据 |
+| [agents/cursor-claude-a01/2026-11-01-原生Skill重构.md](agents/cursor-claude-a01/2026-11-01-原生Skill重构.md) | cursor-claude-a01 | v0.30–v0.60：审查结论、原生 Skill 重构、文风与拆分、决策依据 |
 
 公共议题：[shared/2026-11-01-维护记录组织.md](shared/2026-11-01-维护记录组织.md)（维护区组织方式，v0.23 时期确认；v0.50 起沿用其“按 AI 分目录”的约定，其余细节以本页为准）。

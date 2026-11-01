@@ -19,9 +19,9 @@ description: >-
 ## 按需读取
 
 - 测试范围与证据边界：[测试策略](references/SpringBoot-测试策略.md)
-- 按被测行为选最窄的参考：[接口](../springboot-api/references/SpringBoot-接口与异常.md)、[Service](../springboot-service/references/SpringBoot-Service与模块协作.md)、[持久化](../springboot-persistence/references/SpringBoot-持久化与映射.md)、[事务并发](../springboot-transactions/references/SpringBoot-事务并发与幂等.md)
-- MySQL 测试、迁移、性能：[MySQL 测试与验证](../mysql-engineering/references/测试与验证.md)
-- Profile、连接、依赖、构建配置：[配置与依赖](../springboot-project-config/references/SpringBoot-配置与依赖.md)
+- 按被测行为选最窄的参考：读 `springboot-api`「接口」、`springboot-service`「Service」、`springboot-persistence`「持久化」、`springboot-transactions`「事务并发」
+- MySQL 测试、迁移、性能：读 `mysql-engineering`「MySQL 测试与验证」
+- Profile、连接、依赖、构建配置：读 `springboot-project-config`「配置与依赖」
 
 ## 验证
 

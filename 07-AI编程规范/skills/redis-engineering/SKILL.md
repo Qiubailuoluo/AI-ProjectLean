@@ -20,11 +20,12 @@ description: >-
 
 ## 按需读取
 
-- 结构、缓存范围、Key 命名、Value 投影、序列化、TTL：[数据结构与键值设计](references/数据结构与键值设计.md)
+- 数据结构、缓存范围、Key 命名：[数据结构与键值设计](references/数据结构与键值设计.md)
+- Value 投影、序列化、TTL：[Value 序列化与 TTL](references/Value序列化与TTL.md)
 - 读写、失效时序、一致性、故障降级：[缓存读写与一致性](references/缓存读写与一致性.md)
-- 客户端连接、超时、批处理、脚本、扫描清理：[客户端与命令资源](references/客户端与命令资源.md)（只改这些时，不必读上面两份）
+- 客户端连接、超时、批处理、脚本、扫描清理：[客户端与命令资源](references/客户端与命令资源.md)（只改这些时，不必读其他几份）
 - 失效恢复、旧值回填竞态的具体时序：[缓存失效与恢复](examples/缓存失效与恢复.md)
-- 业务权限、敏感数据：[工程底线](../engineering-baseline/references/工程底线.md)
+- 业务权限、敏感数据：读 `engineering-baseline`「工程底线」
 
 ## 验证
 

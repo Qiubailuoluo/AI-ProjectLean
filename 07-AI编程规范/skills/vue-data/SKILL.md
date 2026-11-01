@@ -19,10 +19,11 @@ description: >-
 
 ## 按需读取
 
-- 请求封装、接口数据、共享状态、客户端缓存：[请求与状态](references/请求与状态.md)
+- 请求封装、接口契约、错误处理、乱序与重试：[请求与状态](references/请求与状态.md)
+- Store、客户端缓存、身份切换清理、上传交互：[共享状态与缓存](references/共享状态与缓存.md)
 - 文件上传、下载、资源发布：同时使用 `file-upload-download`
 - 文件直传用 MinIO：同时使用 `minio-file-lifecycle`；用其他存储时，核对对应服务的契约
-- 429、异常请求、人机验证：[请求防滥用与资源边界](../engineering-baseline/references/请求防滥用与资源边界.md)
+- 429、异常请求、人机验证：读 `abuse-protection`「限流与入口约束」
 - 鉴权状态与退出：同时使用 `vue-navigation`
 - 接口字段、错误码、分页约定：同时使用 `api-contract`
 

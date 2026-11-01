@@ -20,12 +20,12 @@ description: >-
 ## 按需读取
 
 - 接口、DTO、异常、HTTP 权限边界：[接口与异常](references/SpringBoot-接口与异常.md)
-- 身份、授权、输入输出、敏感信息：[工程底线](../engineering-baseline/references/工程底线.md)
-- 公开的高成本接口、限流、人机验证：[请求防滥用与资源边界](../engineering-baseline/references/请求防滥用与资源边界.md)
+- 身份、授权、输入输出、敏感信息：读 `engineering-baseline`「工程底线」
+- 公开的高成本接口、限流、人机验证：读 `abuse-protection`「限流与入口约束」
 - 文件上传、下载、资源发布：同时使用 `file-upload-download`
 - 接口契约、错误码、分页、版本兼容：同时使用 `api-contract`
-- 设计接口测试：[测试策略](../springboot-testing/references/SpringBoot-测试策略.md)
-- 改动涉及配置、依赖、构建：[配置与依赖](../springboot-project-config/references/SpringBoot-配置与依赖.md)
+- 设计接口测试：读 `springboot-testing`「测试策略」
+- 改动涉及配置、依赖、构建：读 `springboot-project-config`「配置与依赖」
 
 ## 验证
 

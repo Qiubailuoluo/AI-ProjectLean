@@ -22,9 +22,9 @@ description: >-
 - 事务边界、并发、幂等、外部副作用、验证：[事务、并发与幂等](references/SpringBoot-事务并发与幂等.md)
 - 具体场景示例（只解释机制，库存、订单不代表目标业务）：[库存条件更新](examples/库存条件更新.md)、[事务回滚验证](examples/事务回滚验证.md)
 - MySQL 隔离级别、锁、约束：同时使用 `mysql-engineering`
-- Spring 缓存的提交时机：[缓存集成](../springboot-service/references/SpringBoot-缓存集成.md)；失效恢复同时使用 `redis-engineering`
-- 设计事务测试：[测试策略](../springboot-testing/references/SpringBoot-测试策略.md)
-- 请求身份、失败、敏感信息：[工程底线](../engineering-baseline/references/工程底线.md)
+- Spring 缓存的提交时机：读 `springboot-service`「缓存集成」；失效恢复同时使用 `redis-engineering`
+- 设计事务测试：读 `springboot-testing`「测试策略」
+- 请求身份、失败、敏感信息：读 `engineering-baseline`「工程底线」
 
 ## 验证
 

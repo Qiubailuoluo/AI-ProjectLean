@@ -23,9 +23,9 @@ description: >-
 - 私有对象的读取、预签名下载：[下载与访问控制](references/下载与访问控制.md)
 - 替换、删除、版本、生命周期、备份与对账：[替换删除与恢复](references/替换删除与恢复.md)
 - 下载包发布、文件校验、隔离、配额：同时使用 `file-upload-download`
-- 签发滥用、异常频率：[请求防滥用与资源边界](../engineering-baseline/references/请求防滥用与资源边界.md)
+- 签发滥用、异常频率：读 `abuse-protection`「限流与入口约束」
 - 经 Nginx 转发上传或缓存下载：同时使用 `nginx-proxy`
-- 用户或租户数据归属、敏感信息：[工程底线](../engineering-baseline/references/工程底线.md)
+- 用户或租户数据归属、敏感信息：读 `engineering-baseline`「工程底线」
 
 ## 验证
 

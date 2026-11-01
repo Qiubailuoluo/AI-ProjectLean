@@ -18,17 +18,17 @@ description: >-
 - 以非 root 用户运行。
 
 **密钥与配置**
-- 密钥不进镜像：`ARG`、`ENV`、`COPY .env` 都会留在层或构建历史里。运行时用环境变量或 secret 注入。
+- 密钥不进镜像：`ARG`、`ENV`、`COPY .env` 都会留在镜像层或构建历史里。构建期要用密钥，用 `RUN --mount=type=secret` 配合 `docker build --secret`；运行时用环境变量或 secret 注入。
 - 仓库只提交 `.env.example`，不提交真实 `.env`。
 
 **运行与停机**
 - `ENTRYPOINT` / `CMD` 用 exec 形式（JSON 数组），让应用成为 PID 1 并收到 `SIGTERM`，才能优雅停机；需要 shell 时用 `exec` 启动真正的进程。
 - JVM 在容器内用 `-XX:MaxRAMPercentage` 之类的比例参数，不硬编码堆大小。
-- 配置健康检查，并区分存活与就绪；Compose 中等待依赖就绪要用 `depends_on` 的 `condition: service_healthy`，仅 `depends_on` 只保证启动顺序。
+- 配置健康检查。Docker/Compose 只有一个 `healthcheck`，不区分存活与就绪（K8s 才有 liveness/readiness 探针）；慢启动的服务设置 `start_period`。Compose 中等待依赖就绪要用 `depends_on` 的 `condition: service_healthy`；只写 `depends_on` 只保证启动顺序，不等就绪。
 - 设置内存、CPU 限制和日志轮转（如 `json-file` 的 `max-size`、`max-file`）。
 
 **网络与数据**
-- 数据库、缓存等中间件端口不对公网暴露：只在内部网络，或绑定 `127.0.0.1`。
+- 数据库、缓存等中间件端口不对公网暴露：只放内部网络，或发布时写成 `127.0.0.1:宿主端口:容器端口`。Docker 发布的端口会绕过 ufw 等主机防火墙规则，不能靠 ufw 拦截。
 - 有状态数据用 volume 持久化，并说明备份方式；不把数据写在容器可写层。
 
 ## 验证

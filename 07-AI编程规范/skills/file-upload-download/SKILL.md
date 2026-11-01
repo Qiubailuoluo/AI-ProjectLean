@@ -25,7 +25,7 @@ description: >-
 - 上传限制、内容校验、隔离、压缩包处理：[上传校验与隔离](references/上传校验与隔离.md)
 - 下载授权、下架、响应头、缓存、验证清单：[下载与撤销](references/下载与撤销.md)
 - 使用 MinIO 或 S3 兼容存储：同时使用 `minio-file-lifecycle`
-- 上传、签名、下载的频率与流量限制：[请求防滥用与资源边界](../engineering-baseline/references/请求防滥用与资源边界.md)
+- 上传、签名、下载的频率与流量限制：读 `abuse-protection`「限流与入口约束」
 
 ## 验证
 

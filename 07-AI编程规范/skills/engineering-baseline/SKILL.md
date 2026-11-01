@@ -31,8 +31,6 @@ description: >-
 
 - 涉及身份授权、CSRF、数据归属、日志、规范与项目冲突的处理：[工程底线](references/工程底线.md)
 - 新增共享能力、抽取复用、补充注释的细则：[代码复用与注释](references/代码复用与注释.md)
-- 公开高成本接口、限流、人机验证：[请求防滥用与资源边界](references/请求防滥用与资源边界.md)
 - 文件上传、下载、下载包发布：使用 `file-upload-download`
-- 调整根目录、环境文件、Docker/Compose、部署目录：[项目目录与部署边界](references/项目目录与部署边界.md)
 
-按技术栈叠加：Java 用 `java-coding`，Spring Boot 用 `springboot-*`，前端用 `typescript-frontend` 与 `vue-*`，数据与中间件用 `mysql-engineering`、`redis-engineering`、`minio-file-lifecycle`、`nginx-proxy`，文件上传下载用 `file-upload-download`，接口契约用 `api-contract`，容器用 `docker-deploy`，安全编码用 `security-baseline`，提交用 `git-delivery`，审查用 `code-review`。
+按技术栈叠加：Java 用 `java-coding`，Spring Boot 用 `springboot-*`，前端用 `typescript-frontend` 与 `vue-*`，数据与中间件用 `mysql-engineering`、`redis-engineering`、`minio-file-lifecycle`、`nginx-proxy`，文件上传下载用 `file-upload-download`，接口契约用 `api-contract`，容器用 `docker-deploy`，目录与部署边界用 `deploy-layout`，公开高成本接口用 `abuse-protection`，安全编码用 `security-baseline`，提交用 `git-delivery`，审查用 `code-review`。

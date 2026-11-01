@@ -19,9 +19,9 @@ description: >-
 ## 按需读取
 
 - 依赖、构建配置、资源发布、部署路径：[构建与验证](references/构建与验证.md)
-- 浏览器流程测试：[页面可操作性与自动化验证](../vue-ui/references/页面可操作性与自动化验证.md)
+- 浏览器流程测试：读 `vue-ui`「页面可操作性与自动化验证」
 - 下载包、附件、发布产物的体积：同时使用 `file-upload-download`
-- 根目录、环境文件、Docker/Compose、部署目录：[项目目录与部署边界](../engineering-baseline/references/项目目录与部署边界.md)
+- 根目录、环境文件、Docker/Compose、部署目录：读 `deploy-layout`「项目目录与文件归属」
 - 生产环境用 Nginx 提供静态资源或代理：同时使用 `nginx-proxy`；用其他托管方式时，依据对应平台配置
 
 ## 验证

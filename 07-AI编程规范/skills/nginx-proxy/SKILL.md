@@ -20,12 +20,14 @@ description: >-
 
 ## 按需读取
 
-- 路径映射、转发信任、超时与重试、上传限制、故障定位：[代理路径与排查](references/代理路径与排查.md)
+- 路径映射、配置发布、故障定位：[代理路径与排查](references/代理路径与排查.md)
+- 转发头、可信代理、HTTPS 上游：[转发头与信任边界](references/转发头与信任边界.md)
+- 超时、重试、上传限制、流式连接：[超时重试与请求体](references/超时重试与请求体.md)
 - 请求速率、突发、并发占用：[限流与连接资源](references/限流与连接资源.md)
 - `proxy_cache`、共享响应、缓存 Key、TTL、失效：[代理缓存](references/代理缓存.md)
-- 业务预算、验证码：[请求防滥用与资源边界](../engineering-baseline/references/请求防滥用与资源边界.md)
+- 业务预算、验证码：读 `abuse-protection`「限流与入口约束」
 - 上传下载安全、独立资源发布：同时使用 `file-upload-download`
-- 凭据、认证、可信代理、敏感信息：[工程底线](../engineering-baseline/references/工程底线.md)
+- 凭据、认证、可信代理、敏感信息：读 `engineering-baseline`「工程底线」
 
 ## 验证
 

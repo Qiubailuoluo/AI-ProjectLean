@@ -2,7 +2,7 @@
 """校验 skills/ 目录：每次修改规范后运行。
 
 检查项：
-  错误：name 与目录名不一致、缺少/超长 description、SKILL.md 超过 500 行、链接指向不存在的文件或标题
+  错误：name 与目录名不一致、缺少/超长 description、SKILL.md 超过 500 行、链接指向不存在的文件或标题、链接离开本 Skill 目录
   警告：SKILL.md 超过 100 行、references/examples 文件没有任何文档链接到它
 输出：常驻上下文成本（所有 description 字符数）和各 SKILL.md 大小。
 
@@ -91,12 +91,33 @@ for p in md_files:
         if not os.path.exists(q):
             errors.append(f"{os.path.relpath(p, ROOT)}: 链接不存在 -> {t}"); continue
         linked.add(q)
-        if p.startswith(SKILLS + os.sep) and not q.startswith(SKILLS + os.sep):
-            errors.append(f"{os.path.relpath(p, ROOT)}: 链接指向 skills/ 之外，安装后会断 -> {t}")
+        if p.startswith(SKILLS + os.sep):
+            own = os.path.join(SKILLS, os.path.relpath(p, SKILLS).split(os.sep)[0]) + os.sep
+            if not q.startswith(own):
+                errors.append(f"{os.path.relpath(p, ROOT)}: 链接离开了本 Skill 目录（跨 Skill 请写 Skill 名，不写路径） -> {t}")
         if anchor and q.endswith(".md"):
             a = urllib.parse.unquote(anchor[1:])
             if slug(a) not in headings(q) and a not in headings(q):
                 errors.append(f"{os.path.relpath(p, ROOT)}: 标题不存在 -> {t}{anchor}")
+
+# 跨 Skill 名称引用：`skill`「标题」须指向存在的 Skill，且标题能对应其某个 reference/example 文件名
+def stems(sk):
+    out = []
+    for sub in ("references", "examples"):
+        b = os.path.join(SKILLS, sk, sub)
+        if os.path.isdir(b):
+            out += [os.path.splitext(f)[0] for f in os.listdir(b) if f.endswith(".md")]
+    return out
+for p in md_files:
+    if not p.startswith(SKILLS + os.sep): continue
+    txt = open(p, encoding="utf-8").read()
+    for m in re.finditer(r"`([a-z0-9-]+)`「([^」]+)」", txt):
+        sk, title = m.group(1), m.group(2)
+        rel = os.path.relpath(p, ROOT)
+        if sk not in skill_dirs:
+            errors.append(f"{rel}: 引用了不存在的 Skill `{sk}`"); continue
+        if not any(title in st or st in title for st in stems(sk)):
+            errors.append(f"{rel}: `{sk}` 下找不到与「{title}」对应的参考文件")
 
 for d in skill_dirs:
     for sub in ("references", "examples"):

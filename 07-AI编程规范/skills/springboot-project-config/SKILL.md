@@ -18,11 +18,11 @@ description: >-
 
 ## 按需读取
 
-- 根目录、环境文件、Docker/Compose、部署目录：[项目目录与部署边界](../engineering-baseline/references/项目目录与部署边界.md)
+- 根目录、环境文件、Docker/Compose、部署目录：读 `deploy-layout`「项目目录与文件归属」
 - 包结构、MVC/DDD、common/config、外部集成边界：[项目组织与共享职责](references/SpringBoot-项目组织与共享职责.md)
 - 环境配置、日志、依赖、构建：[配置与依赖](references/SpringBoot-配置与依赖.md)
-- 缓存实现、CacheManager、缓存容量或过期配置：[缓存集成](../springboot-service/references/SpringBoot-缓存集成.md)
-- 密钥、认证配置、敏感信息、访问控制：[工程底线](../engineering-baseline/references/工程底线.md)
+- 缓存实现、CacheManager、缓存容量或过期配置：读 `springboot-service`「缓存集成」
+- 密钥、认证配置、敏感信息、访问控制：读 `engineering-baseline`「工程底线」
 
 ## 验证
 
